@@ -30,6 +30,17 @@ In XAMPP for Windows version 7.2.9-0, the xampp_start.exe file located at C:\xam
 
 Since xampp_start.exe is executed with SYSTEM privileges (e.g., via Windows service, scheduled task, or autorun configuration), an attacker can replace the binary with a malicious executable such as a reverse shell. Upon system reboot, the attacker gains arbitrary code execution as NT AUTHORITY\SYSTEM.
 
+Permissions Output (icacls) fo C:\xampp\xampp_start.exe :
+
+`
+BUILTIN\Administrators:(I)(F)
+NT AUTHORITY\SYSTEM:(I)(F)
+BUILTIN\Users:(I)(RX)
+NT AUTHORITY\Authenticated Users:(I)(M)
+`
+
+
+
 Proof of Concept (PoC):
 
 1 - Log in as a standard user.

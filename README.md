@@ -33,6 +33,10 @@ Since xampp_start.exe is executed with SYSTEM privileges (e.g., via Windows serv
 Proof of Concept (PoC):
 
 1 - Log in as a standard user.
+
 2 - Replace C:\xampp\xampp_start.exe with a reverse shell or other SYSTEM payload.
+
 3 - Reboot the machine.
+
 4 - Observe the payload executing as SYSTEM (whoami → NT AUTHORITY\SYSTEM).
+
